@@ -9,8 +9,12 @@ class BriftApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Brift",
       home: const HomePage(),
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.black,
+          appBarTheme: const AppBarTheme(backgroundColor: Colors.black)),
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
     );
