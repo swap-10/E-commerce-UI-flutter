@@ -80,11 +80,11 @@ class _LoginPageState extends State<LoginPage> {
             ButtonBar(
               children: <Widget>[
                 TextButton(
+                  child: const Text("Cancel"),
                   style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.black),
                   ),
-                  child: const Text("Cancel"),
                   onPressed: () {
                     _usernameController.clear();
                     _passwordController.clear();
@@ -92,6 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ElevatedButton(
                   child: const Text('Next'),
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(8.0),
+                  ),
                   onPressed: () {
                     _usernameController.clear();
                     _passwordController.clear();

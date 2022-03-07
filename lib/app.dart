@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'login.dart';
 import 'colors.dart';
+import 'supplemental/cut_corners_border.dart';
 
 final ThemeData _kBriftTheme = _buildBriftTheme();
 
@@ -26,7 +27,12 @@ ThemeData _buildBriftTheme() {
           color: kBriftBrown900,
         ),
       ),
-      border: OutlineInputBorder(),
+      border: CutCornersBorder(),
+    ),
+    buttonTheme: const ButtonThemeData(
+      shape: BeveledRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+      ),
     ),
   );
 }

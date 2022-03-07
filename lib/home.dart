@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
       return SizedBox(
         height: double.infinity,
         child: Card(
+          elevation: 3.0,
           color: const Color.fromARGB(255, 240, 171, 111),
           clipBehavior: Clip.antiAlias,
           child: Column(
